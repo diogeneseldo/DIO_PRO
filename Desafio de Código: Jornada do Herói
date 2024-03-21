@@ -1,0 +1,20 @@
+def jornada_heroi(posicao_inicial, total_passos):
+    if 2 <= total_passos <= 3:
+        posicao_final = posicao_inicial + 5
+    elif 3 < total_passos <= 15:
+        posicao_final = posicao_inicial + 18
+    elif 6 <= total_passos <= 10:
+        posicao_final = posicao_inicial + 16
+    else:
+        posicao_final = posicao_inicial + total_passos
+    return posicao_final
+
+# Entrada de dados
+posicao_inicial = int(input("Digite a posição inicial do herói na floresta: "))
+total_passos = int(input("Digite o número total de passos que o herói deve dar: "))
+
+# Chamada da função
+posicao_final = jornada_heroi(posicao_inicial, total_passos)
+
+# Exibição do resultado
+print("Posição final do herói:", posicao_final)
